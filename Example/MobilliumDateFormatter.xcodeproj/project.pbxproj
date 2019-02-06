@@ -12,14 +12,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0BB151560416F45D63F75557 /* MobilliumDateFormatter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MobilliumDateFormatter.podspec; path = ../MobilliumDateFormatter.podspec; sourceTree = "<group>"; };
+		0BB151560416F45D63F75557 /* MobilliumDateFormatter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MobilliumDateFormatter.podspec; path = ../MobilliumDateFormatter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		37C1C828E07CB346BB4E5C4F /* Pods_MobilliumDateFormatter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilliumDateFormatter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F8B7EA123217260055C14D /* Pods-MobilliumDateFormatter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumDateFormatter_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilliumDateFormatter_Tests/Pods-MobilliumDateFormatter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* MobilliumDateFormatter_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilliumDateFormatter_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6A50609082EBCACB6AF37F59 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		8F952F8D2BC52492549B46B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6A50609082EBCACB6AF37F59 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8F952F8D2BC52492549B46B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CD5E519D7F415A043E172C70 /* Pods-MobilliumDateFormatter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumDateFormatter_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobilliumDateFormatter_Tests/Pods-MobilliumDateFormatter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,14 +130,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4PWC9KX3UT;
 						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -331,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54F8B7EA123217260055C14D /* Pods-MobilliumDateFormatter_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4PWC9KX3UT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -345,7 +342,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobilliumDateFormatter_Example.app/MobilliumDateFormatter_Example";
 			};
 			name = Debug;
 		};
@@ -353,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD5E519D7F415A043E172C70 /* Pods-MobilliumDateFormatter_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4PWC9KX3UT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -363,7 +360,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobilliumDateFormatter_Example.app/MobilliumDateFormatter_Example";
 			};
 			name = Release;
 		};

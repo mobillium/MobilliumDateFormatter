@@ -1,0 +1,16 @@
+PODS:
+  - MobilliumDateFormatter (0.1.0)
+
+DEPENDENCIES:
+  - MobilliumDateFormatter (from `../`)
+
+EXTERNAL SOURCES:
+  MobilliumDateFormatter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MobilliumDateFormatter: 1285231c8599b866f4428f244ff7bc5851b3f841
+
+PODFILE CHECKSUM: 873107ad216c46c49665232acadad65fc6e21ea1
+
+COCOAPODS: 1.5.3

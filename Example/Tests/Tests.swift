@@ -13,16 +13,22 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
+    func testStringToStringWithFormatter() {
+        // Value
+        let dateString = "2001-01-01 01:01:00"
+        
+        // Create Date
+        let date = Date.from(dateString, format: .dateTime)
+        
+        // Check
+        XCTAssertNotNil(date)
+        
+        // Create Date String with Formatter
+        let newDateString = date?.to(.readableDateTimeWithSpace)
+        
+        // Check
+        print(newDateString)
+        XCTAssertNotNil(newDateString)
     }
     
 }
