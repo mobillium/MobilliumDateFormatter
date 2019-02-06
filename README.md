@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+- iOS 8.0+
+
 ## Installation
 
 MobilliumDateFormatter is available through [CocoaPods](https://cocoapods.org). To install
@@ -19,10 +21,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'MobilliumDateFormatter'
 ```
-
-## Author
-
-aslanmehmetsalih, aslanmehmetsalih@hotmail.com
 
 ## License
 
