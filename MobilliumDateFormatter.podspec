@@ -1,4 +1,4 @@
-od::Spec.new do |s|
+Pod::Spec.new do |s|
     s.name             = 'MobilliumDateFormatter'
     s.version          = '1.0.0'
     s.summary          = 'Date formatter helper for iOS apps.'
