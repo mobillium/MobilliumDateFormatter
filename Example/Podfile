@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MobilliumDateFormatter_Tests' do
+  pod 'MobilliumDateFormatter', :path => '../'
+  
+  
+end
