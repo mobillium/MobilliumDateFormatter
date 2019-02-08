@@ -1,6 +1,10 @@
 import XCTest
 import MobilliumDateFormatter
 
+extension Date.Format {
+    static let monthName = Date.Format.custom(rawValue: "MMMM")
+}
+
 class Tests: XCTestCase {
     
     override func setUp() {
@@ -13,22 +17,37 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testStringToStringWithFormatter() {
+    func testStringToDate() {
         // Value
         let dateString = "2001-01-01 01:01:00"
         
-        // Create Date
+        // Create a Date
         let date = Date.from(dateString, format: .dateTime)
         
         // Check
         XCTAssertNotNil(date)
+    }
+    
+    func testDateToString() {
+        // Value
+        let date = Date()
         
-        // Create Date String with Formatter
-        let newDateString = date?.to(.readableDateTimeWithSpace)
+        // Create a String
+        let dateString = date.to(.monthName)
         
         // Check
-        print(newDateString)
-        XCTAssertNotNil(newDateString)
+        XCTAssertNotNil(dateString)
+    }
+    
+    func testTimeIntervalToString() {
+        // Value
+        let timeInterval = TimeInterval(exactly: 1549611277)!
+        
+        // Create a Date
+        let date = Date.from(timeInterval)
+        
+        // Check
+        XCTAssertNotNil(date)
     }
     
 }
