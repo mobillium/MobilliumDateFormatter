@@ -17,26 +17,65 @@ public extension Date {
     
     enum Format {
         
-        /// Format: yyyy-MM-dd
-        case date
+        /// 2-digit year
+        case yy
         
-        /// Format: yyyy-MM-dd HH:mm:ss
-        case dateTime
+        /// 4-digit year
+        case yyyy
         
-        /// Format: dd.MM.yyyy
-        case readableDate
+        /// The numeric month of the year. A single M will use '1' for January.
+        case M
         
-        /// Format: dd.MM.yyyy HH:mm
-        case readableDateTime
+        /// The numeric month of the year. A double M will use '01' for January.
+        case MM
         
-        /// Format: HH:mm
-        case readableTime
+        /// The shorthand name of the month
+        case MMM
         
-        /// Format: d MMMM yyyy
-        case readableDateWithSpace
+        /// Full name of the month
+        case MMMM
         
-        /// Format: d MMMM yyyy HH:mm
-        case readableDateTimeWithSpace
+        /// Narrow name of the month
+        case MMMMM
+        
+        /// The day of the month. A single d will use 1 for January 1st.
+        case d
+        
+        /// The day of the month. A double d will use 01 for January 1st.
+        case dd
+        
+        /// The day of week in the month
+        case E
+        
+        /// The full name of the day
+        case EEEE
+        
+        /// The 12-hour hour.
+        case h
+        
+        /// The 12-hour hour padding with a zero if there is only 1 digit
+        case hh
+        
+        /// The 24-hour hour.
+        case H
+        
+        /// The 24-hour hour padding with a zero if there is only 1 digit.
+        case HH
+        
+        /// AM / PM for 12-hour time formats
+        case a
+        
+        /// The minute, with no padding for zeroes.
+        case m
+        
+        /// The minute with zero padding.
+        case mm
+        
+        /// The seconds, with no padding for zeroes.
+        case s
+        
+        /// The seconds with zero padding.
+        case ss
         
         //MARK: Custom
         /// Custom Format
@@ -45,13 +84,26 @@ public extension Date {
         /// The corresponding `String` value.
         public var rawValue: String {
             switch self {
-            case .date:                         return "yyyy-MM-dd"
-            case .dateTime:                     return "yyyy-MM-dd HH:mm:ss"
-            case .readableDate:                 return "dd.MM.yyyy"
-            case .readableTime:                 return "HH:mm"
-            case .readableDateTime:             return "dd.MM.yyyy HH:mm"
-            case .readableDateWithSpace:        return "d MMMM yyyy"
-            case .readableDateTimeWithSpace:    return "d MMMM yyyy HH:mm"
+            case .yy:                           return "yy"
+            case .yyyy:                         return "yyyy"
+            case .M:                            return "M"
+            case .MM:                           return "MM"
+            case .MMM:                          return "MMM"
+            case .MMMM:                         return "MMMM"
+            case .MMMMM:                        return "MMMMM"
+            case .d:                            return "d"
+            case .dd:                           return "dd"
+            case .E:                            return "E"
+            case .EEEE:                         return "EEEE"
+            case .h:                            return "h"
+            case .hh:                           return "hh"
+            case .H:                            return "H"
+            case .HH:                           return "HH"
+            case .a:                            return "a"
+            case .m:                            return "m"
+            case .mm:                           return "mm"
+            case .s:                            return "s"
+            case .ss:                           return "ss"
             case .custom(let rawValue):         return rawValue
             }
         }
