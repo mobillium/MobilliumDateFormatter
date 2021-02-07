@@ -1,9 +1,13 @@
 # MobilliumDateFormatter
 
-[![CI Status](https://img.shields.io/travis/aslanmehmetsalih/MobilliumDateFormatter.svg?style=flat)](https://travis-ci.org/aslanmehmetsalih/MobilliumDateFormatter)
+[![CI Status](https://img.shields.io/travis/aslanmehmetsalih/MobilliumDateFormatter.svg?style=flat)](https://travis-ci.org/mobillium/MobilliumDateFormatter)
 [![Version](https://img.shields.io/cocoapods/v/MobilliumDateFormatter.svg?style=flat)](https://cocoapods.org/pods/MobilliumDateFormatter)
 [![License](https://img.shields.io/cocoapods/l/MobilliumDateFormatter.svg?style=flat)](https://cocoapods.org/pods/MobilliumDateFormatter)
 [![Platform](https://img.shields.io/cocoapods/p/MobilliumDateFormatter.svg?style=flat)](https://cocoapods.org/pods/MobilliumDateFormatter)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
@@ -22,26 +26,105 @@ pod 'MobilliumDateFormatter'
 
 MobilliumDateFormatter comes with these formats:
 ```swift
-/// Format: yyyy-MM-dd
-case date
+/// 2-digit year
+/// Example: 08
+case yy
 
-/// Format: yyyy-MM-dd HH:mm:ss
-case dateTime
+/// 4-digit year
+/// Example: 2008
+case yyyy
 
-/// Format: dd.MM.yyyy
-case readableDate
+/// The quarter of the year. Use QQ if you want zero padding.
+/// Example: 4
+case Q
 
-/// Format: dd.MM.yyyy HH:mm
-case readableDateTime
+/// Quarter including "Q"
+/// Example: Q4
+case QQQ
 
-/// Format: HH:mm
-case readableTime
+/// Quarter spelled out
+/// Example: 4th quarter
+case QQQQ
 
-/// Format: d MMMM yyyy
-case readableDateWithSpace
+/// The numeric month of the year. A single M will use '1' for January.
+/// Example: 12
+case M
 
-/// Format: d MMMM yyyy HH:mm
-case readableDateTimeWithSpace
+/// The numeric month of the year. A double M will use '01' for January.
+/// Example: 12
+case MM
+
+/// The shorthand name of the month
+/// Example: Dec
+case MMM
+
+/// Full name of the month
+/// Example: December
+case MMMM
+
+/// Narrow name of the month
+/// Example: D
+case MMMMM
+
+/// The day of the month. A single d will use 1 for January 1st.
+/// Example: 14
+case d
+
+/// The day of the month. A double d will use 01 for January 1st.
+/// Example: 14
+case dd
+
+/// The day of week in the month
+/// Example: 3rd Tuesday in December
+case F
+
+/// The day of week in the month
+/// Example: Tues
+case E
+
+/// The full name of the day
+/// Example: Tuesday
+case EEEE
+
+/// The narrow day of week
+/// Example: T
+case EEEEE
+
+/// The 12-hour hour.
+/// Example: 4
+case h
+
+/// The 12-hour hour padding with a zero if there is only 1 digit
+/// Example: 04
+case hh
+
+/// The 24-hour hour.
+/// Example: 16
+case H
+
+/// The 24-hour hour padding with a zero if there is only 1 digit.
+/// Example: 16
+case HH
+
+/// AM / PM for 12-hour time formats
+/// Example: PM
+case a
+
+/// The minute, with no padding for zeroes.
+/// Example: 35
+case m
+
+/// The minute with zero padding.
+/// Example: 35
+case mm
+
+/// The seconds, with no padding for zeroes.
+/// Example: 8
+case s
+
+/// The seconds with zero padding.
+/// Example: 08
+case ss
 ```
 
 or Create your format:
@@ -49,7 +132,7 @@ or Create your format:
 import MobilliumDateFormatter
 
 extension Date.Format {
-static let monthName = Date.Format.custom(rawValue: "MMMM")
+    static let dateTime = Date.Format.custom(rawValue: "yyyy-MM-dd HH:mm:ss")
 }
 ```
 
@@ -67,7 +150,7 @@ let date = Date.from(dateString, format: .dateTime)
 Date to String:
 ```swift
 let date = Date()
-let dateString = date.to(.monthName)
+let dateString = date.to(.MMMM)
 ```
 
 TimeInterval to Date:

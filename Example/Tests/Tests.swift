@@ -2,7 +2,7 @@ import XCTest
 import MobilliumDateFormatter
 
 extension Date.Format {
-    static let monthName = Date.Format.custom(rawValue: "MMMM")
+    static let dateTime = Date.Format.custom(rawValue: "yyyy-MM-dd HH:mm:ss")
 }
 
 class Tests: XCTestCase {
@@ -33,7 +33,7 @@ class Tests: XCTestCase {
         let date = Date()
         
         // Create a String
-        let dateString = date.to(.monthName)
+        let dateString = date.to(.MMMM)
         
         // Check
         XCTAssertNotNil(dateString)
