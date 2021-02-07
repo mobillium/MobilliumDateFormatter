@@ -1,5 +1,5 @@
 PODS:
-  - MobilliumDateFormatter (1.0.1)
+  - MobilliumDateFormatter (1.1.0)
 
 DEPENDENCIES:
   - MobilliumDateFormatter (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MobilliumDateFormatter: 7d2c1b4f33f7bc4cb67860a0c53c228409cfa528
+  MobilliumDateFormatter: eccff23e7c493446d1600b123afc7a2da0e7b3cb
 
 PODFILE CHECKSUM: 873107ad216c46c49665232acadad65fc6e21ea1
 
