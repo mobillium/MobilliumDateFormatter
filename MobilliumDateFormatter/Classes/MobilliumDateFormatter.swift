@@ -181,4 +181,55 @@ public extension Date {
         return dateformatter.string(from: self)
     }
     
+    private func getThisWeekList() -> [Date] {
+        var thisWeekList: [Date] = []
+        for i in 0..<7 {
+            guard let dayInDate = Calendar.current.date(byAdding: .day, value: i, to: startOfWeek) else { return [] }
+            thisWeekList.append(dayInDate)
+        }
+        return thisWeekList
+    }
+    
+    private func getNextWeekList() -> [Date] {
+        var nextWeekList: [Date] = []
+        for i in 1...7 {
+            nextWeekList.append(Calendar.current.date(byAdding: .day, value: i, to: getThisWeekList().last!)!)
+        }
+        return nextWeekList
+    }
+    
+    private func getLastWeekList() -> [Date] {
+        var lastWeekList: [Date] = []
+        for i in 1...7 {
+            lastWeekList.append(Calendar.current.date(byAdding: .day, value: -i, to: getThisWeekList().last!)!)
+        }
+        return lastWeekList
+    }
+    
+    func isNextWeek() -> Bool {
+        for date in getNextWeekList() {
+            if date.to(.custom(rawValue: "yyyy-MM-dd")) == self.to(.custom(rawValue: "yyyy-MM-dd")) { return true }
+        }
+        return false
+    }
+    
+    func isThisWeek() -> Bool {
+        for date in getThisWeekList() {
+            if date.to(.custom(rawValue: "yyyy-MM-dd")) == self.to(.custom(rawValue: "yyyy-MM-dd")) { return true }
+        }
+        return false
+    }
+    
+    func isLastWeek() -> Bool {
+        for date in getLastWeekList() {
+            if date.to(.custom(rawValue: "yyyy-MM-dd")) == self.to(.custom(rawValue: "yyyy-MM-dd")) { return true }
+        }
+        return false
+    }
+
+    var startOfWeek: Date {
+        let gregorian = Calendar(identifier: .gregorian)
+        let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self))
+        return gregorian.date(byAdding: .day, value: 1, to: sunday!)!
+    }
 }
