@@ -181,4 +181,10 @@ public extension Date {
         return dateformatter.string(from: self)
     }
     
+    func add(_ component: DateComponentType, count: Int) -> Date? {
+        // ...
+        return nil
+    }
+
+    
 }
