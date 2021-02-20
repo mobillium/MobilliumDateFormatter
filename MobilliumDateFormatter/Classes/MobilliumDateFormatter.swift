@@ -186,5 +186,18 @@ public extension Date {
         return nil
     }
 
+    /// Check if date is within today.
+    public var isToday: Bool {
+        return Calendar(identifier: Calendar.current.identifier).isDateInToday(self)
+    }
     
+    /// Check if date is within tomorrow.
+    public var isTomorow: Bool {
+        return Calendar(identifier: Calendar.current.identifier).isDateInTomorrow(self)
+    }
+    
+    /// Check if date is within yesterday.
+    public var isYesterday: Bool {
+        return Calendar(identifier: Calendar.current.identifier).isDateInYesterday(self)
+    }
 }
