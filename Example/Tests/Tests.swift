@@ -50,4 +50,15 @@ class Tests: XCTestCase {
         XCTAssertNotNil(date)
     }
     
+    func testAddHour() {
+        // Value
+        let date = Date()
+        
+        // Create added Date
+        let adddedDate = date.add(.hour, count: 3)
+        
+        // Check
+        XCTAssertNotNil(adddedDate)
+    }
+    
 }
