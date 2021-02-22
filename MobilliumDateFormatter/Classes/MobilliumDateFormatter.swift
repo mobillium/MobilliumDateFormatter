@@ -198,6 +198,6 @@ public extension Date {
     
     /// Check if date is within yesterday.
     public var isYesterday: Bool {
-        return Calendar(identifier: Calendar.current.identifier).isDateInYesterday(self)
+        return Calendar.current.isDateInYesterday(self)
     }
 }
