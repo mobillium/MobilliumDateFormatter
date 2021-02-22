@@ -203,7 +203,7 @@ public extension Date {
     func isLastMonth() -> Bool {
         let calendar = Calendar.current
         let monthOfTheYear = calendar.component(.month, from: Date())
-        let lastMonthOfTheYear = calendar.component(.month, from: Date())
+        let lastMonthOfTheYear = calendar.component(.month, from: self)
         return monthOfTheYear == lastMonthOfTheYear + 1
     }
     
