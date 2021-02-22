@@ -50,4 +50,33 @@ class Tests: XCTestCase {
         XCTAssertNotNil(date)
     }
     
+    func testIsNextYear() {
+        // Value
+        let dateFalse = CustomDate.from(year: 1995, month: 12, day: 12)
+        let dateTrue = CustomDate.from(year: 2022, month: 12, day: 12)
+
+        // Check
+        XCTAssertTrue(dateTrue.isNextYear())
+        XCTAssertFalse(dateFalse.isNextYear())
+    }
+    
+    func testIsThisYear() {
+        // Value
+        let dateFalse = CustomDate.from(year: 1995, month: 12, day: 12)
+        let dateTrue = CustomDate.from(year: 2021, month: 12, day: 12)
+
+        // Check
+        XCTAssertTrue(dateTrue.isThisYear())
+        XCTAssertFalse(dateFalse.isThisYear())
+    }
+    
+    func testIsLastYear() {
+        // Value
+        let dateFalse = CustomDate.from(year: 1995, month: 12, day: 12)
+        let dateTrue = CustomDate.from(year: 2020, month: 12, day: 12)
+
+        // Check
+        XCTAssertTrue(dateTrue.isLastYear())
+        XCTAssertFalse(dateFalse.isLastYear())
+    }
 }
