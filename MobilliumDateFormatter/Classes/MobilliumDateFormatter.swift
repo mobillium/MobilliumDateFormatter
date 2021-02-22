@@ -196,7 +196,7 @@ public extension Date {
     func isThisMonth() -> Bool {
         let calendar = Calendar.current
         let monthOfTheYear = calendar.component(.month, from: Date())
-        let currentMonthOfTheYear = calendar.component(.month, from: Date())
+        let currentMonthOfTheYear = calendar.component(.month, from: self)
         return monthOfTheYear == currentMonthOfTheYear
     }
     
