@@ -189,7 +189,7 @@ public extension Date {
     func isNextMonth() -> Bool {
         let calendar = Calendar.current
         let monthOfTheYear = calendar.component(.month, from: Date())
-        let nextMonthOfTheYear = calendar.component(.month, from: Date())
+        let nextMonthOfTheYear = calendar.component(.month, from: self)
         return monthOfTheYear == nextMonthOfTheYear - 1
     }
     
