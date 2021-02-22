@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		91E7B5EF052F28FF13B66FC2 /* Pods_MobilliumDateFormatter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C1C828E07CB346BB4E5C4F /* Pods_MobilliumDateFormatter_Tests.framework */; };
-		B376D81925E3E6FA00311ACB /* CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376D81825E3E6FA00311ACB /* CustomDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +20,6 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6A50609082EBCACB6AF37F59 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		8F952F8D2BC52492549B46B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B376D81825E3E6FA00311ACB /* CustomDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDate.swift; sourceTree = "<group>"; };
 		CD5E519D7F415A043E172C70 /* Pods-MobilliumDateFormatter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumDateFormatter_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobilliumDateFormatter_Tests/Pods-MobilliumDateFormatter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +65,6 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B376D81825E3E6FA00311ACB /* CustomDate.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -216,7 +213,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B376D81925E3E6FA00311ACB /* CustomDate.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

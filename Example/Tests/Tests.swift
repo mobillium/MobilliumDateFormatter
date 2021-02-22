@@ -52,8 +52,8 @@ class Tests: XCTestCase {
     
     func testIsNextYear() {
         // Value
-        let dateFalse = CustomDate.from(year: 1995, month: 12, day: 12)
-        let dateTrue = CustomDate.from(year: 2022, month: 12, day: 12)
+        let dateFalse = customDate(year: 1995, month: 12, day: 12)
+        let dateTrue = customDate(year: 2022, month: 12, day: 12)
 
         // Check
         XCTAssertTrue(dateTrue.isNextYear())
@@ -62,8 +62,8 @@ class Tests: XCTestCase {
     
     func testIsThisYear() {
         // Value
-        let dateFalse = CustomDate.from(year: 1995, month: 12, day: 12)
-        let dateTrue = CustomDate.from(year: 2021, month: 12, day: 12)
+        let dateFalse = customDate(year: 1995, month: 12, day: 12)
+        let dateTrue = customDate(year: 2021, month: 12, day: 12)
 
         // Check
         XCTAssertTrue(dateTrue.isThisYear())
@@ -72,11 +72,26 @@ class Tests: XCTestCase {
     
     func testIsLastYear() {
         // Value
-        let dateFalse = CustomDate.from(year: 1995, month: 12, day: 12)
-        let dateTrue = CustomDate.from(year: 2020, month: 12, day: 12)
+        let dateFalse = customDate(year: 1995, month: 12, day: 12)
+        let dateTrue = customDate(year: 2020, month: 12, day: 12)
 
         // Check
         XCTAssertTrue(dateTrue.isLastYear())
         XCTAssertFalse(dateFalse.isLastYear())
+    }
+}
+
+//MARK: Helper
+extension Tests {
+    func customDate(year: Int, month: Int, day: Int) -> Date {
+        let gregorianCalendar = NSCalendar(calendarIdentifier: .gregorian)!
+
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.month = month
+        dateComponents.day = day
+
+        let date = gregorianCalendar.date(from: dateComponents)!
+        return date
     }
 }
