@@ -186,5 +186,25 @@ public extension Date {
         return nil
     }
 
+    func isNextMonth() -> Bool {
+        let calendar = Calendar.current
+        let monthOfTheYear = calendar.component(.month, from: Date())
+        let nextMonthOfTheYear = calendar.component(.month, from: Date())
+        return monthOfTheYear == nextMonthOfTheYear - 1
+    }
+    
+    func isThisMonth() -> Bool {
+        let calendar = Calendar.current
+        let monthOfTheYear = calendar.component(.month, from: Date())
+        let currentMonthOfTheYear = calendar.component(.month, from: Date())
+        return monthOfTheYear == currentMonthOfTheYear
+    }
+    
+    func isLastMonth() -> Bool {
+        let calendar = Calendar.current
+        let monthOfTheYear = calendar.component(.month, from: Date())
+        let lastMonthOfTheYear = calendar.component(.month, from: Date())
+        return monthOfTheYear == lastMonthOfTheYear + 1
+    }
     
 }
