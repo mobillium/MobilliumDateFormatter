@@ -52,9 +52,15 @@ class Tests: XCTestCase {
     
     func testIsNextMonth() {
         // Value
-        guard let nextMonthDate = Calendar.current.date(byAdding: .month, value: +1, to: Date()) else { return }
+        let now = Date()
         
         // Check
+        guard
+            let nextMonthDate = Calendar.current.date(byAdding: .month, value: +1, to: now)
+        else {
+            XCTAssert(false)
+            return
+        }
         XCTAssertTrue(nextMonthDate.isNextMonth())
         XCTAssertFalse(nextMonthDate.isLastMonth())
         XCTAssertFalse(nextMonthDate.isThisMonth())
@@ -62,9 +68,15 @@ class Tests: XCTestCase {
     
     func testIsThisMonth() {
         // Value
-        guard let currentMonthDate = Calendar.current.date(byAdding: .month, value: 0, to: Date()) else { return }
+        let now = Date()
         
         // Check
+        guard
+            let currentMonthDate = Calendar.current.date(byAdding: .month, value: 0, to: now)
+        else {
+            XCTAssert(false)
+            return
+        }
         XCTAssertTrue(currentMonthDate.isThisMonth())
         XCTAssertFalse(currentMonthDate.isNextMonth())
         XCTAssertFalse(currentMonthDate.isLastMonth())
@@ -72,9 +84,15 @@ class Tests: XCTestCase {
     
     func testIsLastMonth() {
         // Value
-        guard let lastMonthDate = Calendar.current.date(byAdding: .month, value: -1, to: Date()) else { return }
+        let now = Date()
         
         // Check
+        guard
+            let lastMonthDate = Calendar.current.date(byAdding: .month, value: -1, to: now)
+        else {
+            XCTAssert(false)
+            return
+        }
         XCTAssertTrue(lastMonthDate.isLastMonth())
         XCTAssertFalse(lastMonthDate.isThisMonth())
         XCTAssertFalse(lastMonthDate.isNextMonth())
