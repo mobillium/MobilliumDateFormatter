@@ -52,46 +52,35 @@ class Tests: XCTestCase {
     
     func testIsNextYear() {
         // Value
-        let dateFalse = customDate(year: 1995, month: 12, day: 12)
-        let dateTrue = customDate(year: 2022, month: 12, day: 12)
+        let date = Date()
+        let dateFalse = Calendar.current.date(byAdding: .year, value: -2, to: date)
+        let dateTrue = Calendar.current.date(byAdding: .year, value: 1, to: date)
 
         // Check
-        XCTAssertTrue(dateTrue.isNextYear())
-        XCTAssertFalse(dateFalse.isNextYear())
+        XCTAssertTrue((dateTrue?.isNextYear()) ?? false)
+        XCTAssertFalse((dateFalse?.isNextYear()) ?? true)
     }
     
     func testIsThisYear() {
         // Value
-        let dateFalse = customDate(year: 1995, month: 12, day: 12)
-        let dateTrue = customDate(year: 2021, month: 12, day: 12)
-
+        let date = Date()
+        let dateFalse = Calendar.current.date(byAdding: .year, value: -2, to: date)
+        let dateTrue = Calendar.current.date(byAdding: .year, value: 0, to: date)
+        
         // Check
-        XCTAssertTrue(dateTrue.isThisYear())
-        XCTAssertFalse(dateFalse.isThisYear())
+        XCTAssertTrue((dateTrue?.isThisYear()) ?? false)
+        XCTAssertFalse((dateFalse?.isThisYear()) ?? true)
     }
     
     func testIsLastYear() {
         // Value
-        let dateFalse = customDate(year: 1995, month: 12, day: 12)
-        let dateTrue = customDate(year: 2020, month: 12, day: 12)
+        let date = Date()
+        let dateFalse = Calendar.current.date(byAdding: .year, value: -2, to: date)
+        let dateTrue = Calendar.current.date(byAdding: .year, value: -1, to: date)
+            
 
         // Check
-        XCTAssertTrue(dateTrue.isLastYear())
-        XCTAssertFalse(dateFalse.isLastYear())
-    }
-}
-
-//MARK: Helper
-extension Tests {
-    func customDate(year: Int, month: Int, day: Int) -> Date {
-        let gregorianCalendar = NSCalendar(calendarIdentifier: .gregorian)!
-
-        var dateComponents = DateComponents()
-        dateComponents.year = year
-        dateComponents.month = month
-        dateComponents.day = day
-
-        let date = gregorianCalendar.date(from: dateComponents)!
-        return date
+        XCTAssertTrue((dateTrue?.isLastYear()) ?? false)
+        XCTAssertFalse((dateFalse?.isLastYear())  ?? true)
     }
 }
