@@ -187,17 +187,17 @@ public extension Date {
     }
 
     /// Check if date is within today.
-    public var isToday: Bool {
+    var isToday: Bool {
         return Calendar.current.isDateInToday(self)
     }
     
     /// Check if date is within tomorrow.
-    public var isTomorow: Bool {
+    var isTomorow: Bool {
         return Calendar.current.isDateInTomorrow(self)
     }
     
     /// Check if date is within yesterday.
-    public var isYesterday: Bool {
+    var isYesterday: Bool {
         return Calendar.current.isDateInYesterday(self)
     }
 }
