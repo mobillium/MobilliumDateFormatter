@@ -193,12 +193,12 @@ public extension Date {
         return nil
     }
     
-    private func addHour(count: Int) -> Date {
-        return Calendar.current.date(byAdding: .hour, value: count, to: self)!
+    private func addHour(count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .hour, value: count, to: self)
     }
     
-    private func addMinute(count: Int) -> Date {
-        return Calendar.current.date(byAdding: .minute, value: count, to: self)!
+    private func addMinute(count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .minute, value: count, to: self)
     }
     
 }
