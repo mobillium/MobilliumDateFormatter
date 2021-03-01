@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A7E80F525E7DCC700CFC1C0 /* WeekCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7E80F425E7DCC700CFC1C0 /* WeekCheckTests.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		91E7B5EF052F28FF13B66FC2 /* Pods_MobilliumDateFormatter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C1C828E07CB346BB4E5C4F /* Pods_MobilliumDateFormatter_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BB151560416F45D63F75557 /* MobilliumDateFormatter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MobilliumDateFormatter.podspec; path = ../MobilliumDateFormatter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1A7E80F425E7DCC700CFC1C0 /* WeekCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCheckTests.swift; sourceTree = "<group>"; };
 		37C1C828E07CB346BB4E5C4F /* Pods_MobilliumDateFormatter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilliumDateFormatter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F8B7EA123217260055C14D /* Pods-MobilliumDateFormatter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumDateFormatter_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilliumDateFormatter_Tests/Pods-MobilliumDateFormatter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* MobilliumDateFormatter_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilliumDateFormatter_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1A7E80F425E7DCC700CFC1C0 /* WeekCheckTests.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7E80F525E7DCC700CFC1C0 /* WeekCheckTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
