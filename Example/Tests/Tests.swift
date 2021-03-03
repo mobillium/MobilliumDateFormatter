@@ -50,4 +50,28 @@ class Tests: XCTestCase {
         XCTAssertNotNil(date)
     }
     
+    func testAddSecon() {
+        // Value
+        let date = Date(timeIntervalSince1970: 1614778571) // 2021-03-03 13:36:11
+        let date2 = Date(timeIntervalSince1970: 1614778576) // 2021-03-03 13:36:16
+        
+        // Create result Date
+        let resultDate = date.add(.second, count: 5)
+
+         // Check
+         XCTAssertEqual(date2, resultDate)
+    }
+    
+    func testAddMillisecond() {
+        // Value
+        let date = Date(timeIntervalSince1970: 1614778571) // 2021-03-03 13:36:11
+        let date2 = Date(timeIntervalSince1970: 1614778576) // 2021-03-03 13:36:16
+        
+        // Create result Date
+        let resultDate = date.add(.milisecond, count: 5000)
+
+         // Check
+         XCTAssertEqual(date2, resultDate)
+    }
+    
 }
