@@ -182,9 +182,30 @@ public extension Date {
     }
     
     func add(_ component: DateComponentType, count: Int) -> Date? {
-        // ...
-        return nil
+        switch component {
+        case .month:
+            return addMonth(count: count)
+        case .year:
+            return addYear(count: count)
+        default:
+            return nil
+        }
     }
-
+    
+    private func addMonth(count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .month,
+                                     value: count,
+                                     to: self)
+    }
+    
+    private func addYear(count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .year,
+                                     value: count,
+                                     to: self)
+    }
     
 }
+
+
+
+

@@ -50,4 +50,28 @@ class Tests: XCTestCase {
         XCTAssertNotNil(date)
     }
     
+    func testAddMonth() {
+        // Value
+        let date = Date(timeIntervalSince1970: 1614863780) // 2021-03-03 13:36:11
+        let date2 = Date(timeIntervalSince1970: 1617542180) // 2021-03-03 13:36:16
+        
+        // Create result Date
+        let resultDate = date.add(.month, count: 1)
+
+         // Check
+         XCTAssertEqual(date2, resultDate)
+    }
+
+    func testAddYear() {
+        // Value
+        let date = Date(timeIntervalSince1970: 1617542180) // 2021-03-03 13:36:11
+        let date2 = Date(timeIntervalSince1970: 1649078180) // 2021-03-03 13:36:16
+        
+        // Create result Date
+        let resultDate = date.add(.year, count: 1)
+
+         // Check
+         XCTAssertEqual(date2, resultDate)
+    }
+    
 }
