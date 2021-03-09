@@ -50,4 +50,37 @@ class Tests: XCTestCase {
         XCTAssertNotNil(date)
     }
     
+    func testIsNextYear() {
+        // Value
+        let date = Date()
+        let dateFalse = Calendar.current.date(byAdding: .year, value: -2, to: date)
+        let dateTrue = Calendar.current.date(byAdding: .year, value: 1, to: date)
+
+        // Check
+        XCTAssertTrue((dateTrue?.isNextYear()) ?? false)
+        XCTAssertFalse((dateFalse?.isNextYear()) ?? true)
+    }
+    
+    func testIsThisYear() {
+        // Value
+        let date = Date()
+        let dateFalse = Calendar.current.date(byAdding: .year, value: -2, to: date)
+        let dateTrue = Calendar.current.date(byAdding: .year, value: 0, to: date)
+        
+        // Check
+        XCTAssertTrue((dateTrue?.isThisYear()) ?? false)
+        XCTAssertFalse((dateFalse?.isThisYear()) ?? true)
+    }
+    
+    func testIsLastYear() {
+        // Value
+        let date = Date()
+        let dateFalse = Calendar.current.date(byAdding: .year, value: -2, to: date)
+        let dateTrue = Calendar.current.date(byAdding: .year, value: -1, to: date)
+            
+
+        // Check
+        XCTAssertTrue((dateTrue?.isLastYear()) ?? false)
+        XCTAssertFalse((dateFalse?.isLastYear())  ?? true)
+    }
 }

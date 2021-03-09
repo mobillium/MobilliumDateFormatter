@@ -10,6 +10,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		91E7B5EF052F28FF13B66FC2 /* Pods_MobilliumDateFormatter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C1C828E07CB346BB4E5C4F /* Pods_MobilliumDateFormatter_Tests.framework */; };
 		A20B0CC425ED30A10035E4AE /* MonthCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B0CC325ED30A10035E4AE /* MonthCheckTests.swift */; };
+		FB76D6BC25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76D6BB25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		8F952F8D2BC52492549B46B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A20B0CC325ED30A10035E4AE /* MonthCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCheckTests.swift; sourceTree = "<group>"; };
 		CD5E519D7F415A043E172C70 /* Pods-MobilliumDateFormatter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumDateFormatter_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobilliumDateFormatter_Tests/Pods-MobilliumDateFormatter_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FB76D6BB25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayYesterdayTomorrowTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				A20B0CC325ED30A10035E4AE /* MonthCheckTests.swift */,
+				FB76D6BB25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -218,6 +221,7 @@
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				A20B0CC425ED30A10035E4AE /* MonthCheckTests.swift in Sources */,
+				FB76D6BC25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
