@@ -181,6 +181,27 @@ public extension Date {
         return dateformatter.string(from: self)
     }
     
+    func isNextWeek() -> Bool {
+        let calendar = Calendar.current
+        let weekOfYear = calendar.component(.weekOfYear, from: Date())
+        let nextWeekOfYear = calendar.component(.weekOfYear, from: self)
+        return weekOfYear == nextWeekOfYear - 1
+    }
+    
+    func isThisWeek() -> Bool {
+        let calendar = Calendar.current
+        let weekOfYear = calendar.component(.weekOfYear, from: Date())
+        let currenWeekOfYear = calendar.component(.weekOfYear, from: self)
+        return weekOfYear == currenWeekOfYear
+    }
+    
+    func isLastWeek() -> Bool {
+        let calendar = Calendar.current
+        let weekOfYear = calendar.component(.weekOfYear, from: Date())
+        let lastWeekOfYear = calendar.component(.weekOfYear, from: self)
+        return weekOfYear == lastWeekOfYear + 1
+    }
+  
     func add(_ component: DateComponentType, count: Int) -> Date? {
         // ...
         return nil
