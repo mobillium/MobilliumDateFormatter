@@ -201,4 +201,30 @@ public extension Date {
         let lastWeekOfYear = calendar.component(.weekOfYear, from: self)
         return weekOfYear == lastWeekOfYear + 1
     }
+  
+    func add(_ component: DateComponentType, count: Int) -> Date? {
+        // ...
+        return nil
+    }
+    
+    func isNextYear() -> Bool {
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: Date())
+        let nextYear = calendar.component(.year, from: self)
+        return year == nextYear - 1
+    }
+    
+    func isThisYear() -> Bool {
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: Date())
+        let currentYear = calendar.component(.year, from: self)
+        return currentYear == year
+    }
+    
+    func isLastYear() -> Bool {
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: Date())
+        let lastYear = calendar.component(.year, from: self)
+        return year == lastYear + 1
+    }
 }
