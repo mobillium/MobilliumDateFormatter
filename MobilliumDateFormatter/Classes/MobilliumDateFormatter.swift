@@ -185,7 +185,7 @@ public extension Date {
         // ...
         return nil
     }
-
+  
     /// Check if date is within today.
     var isToday: Bool {
         return Calendar.current.isDateInToday(self)
@@ -199,5 +199,25 @@ public extension Date {
     /// Check if date is within yesterday.
     var isYesterday: Bool {
         return Calendar.current.isDateInYesterday(self)
+      
+    func isNextYear() -> Bool {
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: Date())
+        let nextYear = calendar.component(.year, from: self)
+        return year == nextYear - 1
+    }
+    
+    func isThisYear() -> Bool {
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: Date())
+        let currentYear = calendar.component(.year, from: self)
+        return currentYear == year
+    }
+    
+    func isLastYear() -> Bool {
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: Date())
+        let lastYear = calendar.component(.year, from: self)
+        return year == lastYear + 1
     }
 }
