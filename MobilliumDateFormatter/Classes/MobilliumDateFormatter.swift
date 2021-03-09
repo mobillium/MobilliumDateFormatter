@@ -185,6 +185,21 @@ public extension Date {
         // ...
         return nil
     }
+  
+    /// Check if date is within today.
+    var isToday: Bool {
+        return Calendar.current.isDateInToday(self)
+    }
+    
+    /// Check if date is within tomorrow.
+    var isTomorow: Bool {
+        return Calendar.current.isDateInTomorrow(self)
+    }
+    
+    /// Check if date is within yesterday.
+    var isYesterday: Bool {
+        return Calendar.current.isDateInYesterday(self)
+    }
     
     func isNextYear() -> Bool {
         let calendar = Calendar.current
