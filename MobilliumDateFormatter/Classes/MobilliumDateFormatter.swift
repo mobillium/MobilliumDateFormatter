@@ -205,6 +205,7 @@ public extension Date {
         let monthOfTheYear = calendar.component(.month, from: Date())
         let lastMonthOfTheYear = calendar.component(.month, from: self)
         return monthOfTheYear == lastMonthOfTheYear + 1
+    }
   
     /// Check if date is within today.
     var isToday: Bool {
