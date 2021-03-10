@@ -50,7 +50,7 @@ class Tests: XCTestCase {
         XCTAssertNotNil(date)
     }
     
-    func testAddSecon() {
+    func testAddSecond() {
         // Value
         let date = Date(timeIntervalSince1970: 1614778571) // 2021-03-03 13:36:11
         let date2 = Date(timeIntervalSince1970: 1614778576) // 2021-03-03 13:36:16
