@@ -184,7 +184,7 @@ public extension Date {
     func add(_ component: DateComponentType, count: Int) -> Date? {
         switch component {
         case .hour:
-            return addHour(count: count)
+            return addHour(count)
         case .minute:
             return addMinute(count: count)
         default:
