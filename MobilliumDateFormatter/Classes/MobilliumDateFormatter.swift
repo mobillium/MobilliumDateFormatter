@@ -201,11 +201,6 @@ public extension Date {
         let lastWeekOfYear = calendar.component(.weekOfYear, from: self)
         return weekOfYear == lastWeekOfYear + 1
     }
-  
-    func add(_ component: DateComponentType, count: Int) -> Date? {
-        // ...
-        return nil
-    }
 
     func isNextMonth() -> Bool {
         let calendar = Calendar.current
@@ -263,4 +258,25 @@ public extension Date {
         let lastYear = calendar.component(.year, from: self)
         return year == lastYear + 1
     }
+    
+    func add(_ component: DateComponentType, count: Int) -> Date? {
+        switch component {
+        case .hour:
+            return addHour(count)
+        case .minute:
+            return addMinute(count)
+        default:
+            break
+        }
+        return nil
+    }
+    
+    private func addHour(_ count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .hour, value: count, to: self)
+    }
+    
+    private func addMinute(_ count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .minute, value: count, to: self)
+    }
+    
 }
