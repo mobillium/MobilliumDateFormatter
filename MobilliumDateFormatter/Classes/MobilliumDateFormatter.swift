@@ -186,7 +186,7 @@ public extension Date {
         case .hour:
             return addHour(count)
         case .minute:
-            return addMinute(count: count)
+            return addMinute(:count)
         default:
             break
         }
