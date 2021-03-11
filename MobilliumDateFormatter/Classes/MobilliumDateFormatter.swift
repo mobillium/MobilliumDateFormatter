@@ -261,14 +261,17 @@ public extension Date {
     
     func add(_ component: DateComponentType, count: Int) -> Date? {
         switch component {
+        case .second:
+            return addSecond(count)
+        case .milisecond:
+            return addMillisecond(count)
         case .hour:
             return addHour(count)
         case .minute:
             return addMinute(count)
         default:
-            break
+            return nil
         }
-        return nil
     }
     
     private func addHour(_ count: Int) -> Date? {
@@ -277,6 +280,19 @@ public extension Date {
     
     private func addMinute(_ count: Int) -> Date? {
         return Calendar.current.date(byAdding: .minute, value: count, to: self)
+    }
+
+    private func addSecond(_ count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .second,
+                                     value: count,
+                                     to: self)
+    }
+    
+    private func addMillisecond(_ count: Int) -> Date? {
+        let millisecond = count / 1000
+        return Calendar.current.date(byAdding: .second,
+                                     value: millisecond,
+                                     to: self)
     }
     
 }
