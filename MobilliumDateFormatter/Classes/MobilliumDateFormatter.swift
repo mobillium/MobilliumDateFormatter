@@ -269,6 +269,10 @@ public extension Date {
             return addHour(count)
         case .minute:
             return addMinute(count)
+        case .month:
+            return addMonth(count)
+        case .year:
+            return addYear(count)
         default:
             return nil
         }
@@ -292,6 +296,18 @@ public extension Date {
         let millisecond = count / 1000
         return Calendar.current.date(byAdding: .second,
                                      value: millisecond,
+                                     to: self)
+    }
+    
+    private func addMonth(_ count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .month,
+                                     value: count,
+                                     to: self)
+    }
+    
+    private func addYear(_ count: Int) -> Date? {
+        return Calendar.current.date(byAdding: .year,
+                                     value: count,
                                      to: self)
     }
     
