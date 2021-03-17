@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'MobilliumDateFormatter'
-    s.version          = '1.1.0'
+    s.version          = '1.2.0'
     s.summary          = 'Date formatter helper for iOS apps.'
     
     s.homepage         = 'https://github.com/mobillium/MobilliumDateFormatter'
