@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A7E80F525E7DCC700CFC1C0 /* WeekCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7E80F425E7DCC700CFC1C0 /* WeekCheckTests.swift */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* DateFormatterTests.swift */; };
+		7A0077CF2601FF420085E756 /* BoolOperationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0077CE2601FF420085E756 /* BoolOperationsTests.swift */; };
+		7A0077D22601FF510085E756 /* MathOperationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0077D12601FF510085E756 /* MathOperationsTests.swift */; };
+		7A0077E126021D6E0085E756 /* DateFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0077E026021D6E0085E756 /* DateFormats.swift */; };
 		91E7B5EF052F28FF13B66FC2 /* Pods_MobilliumDateFormatter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C1C828E07CB346BB4E5C4F /* Pods_MobilliumDateFormatter_Tests.framework */; };
-		A20B0CC425ED30A10035E4AE /* MonthCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B0CC325ED30A10035E4AE /* MonthCheckTests.swift */; };
-		FB76D6BC25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76D6BB25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BB151560416F45D63F75557 /* MobilliumDateFormatter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MobilliumDateFormatter.podspec; path = ../MobilliumDateFormatter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1A7E80F425E7DCC700CFC1C0 /* WeekCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCheckTests.swift; sourceTree = "<group>"; };
 		37C1C828E07CB346BB4E5C4F /* Pods_MobilliumDateFormatter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilliumDateFormatter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F8B7EA123217260055C14D /* Pods-MobilliumDateFormatter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumDateFormatter_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilliumDateFormatter_Tests/Pods-MobilliumDateFormatter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* MobilliumDateFormatter_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilliumDateFormatter_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* DateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
 		6A50609082EBCACB6AF37F59 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7A0077CE2601FF420085E756 /* BoolOperationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolOperationsTests.swift; sourceTree = "<group>"; };
+		7A0077D12601FF510085E756 /* MathOperationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperationsTests.swift; sourceTree = "<group>"; };
+		7A0077E026021D6E0085E756 /* DateFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormats.swift; sourceTree = "<group>"; };
 		8F952F8D2BC52492549B46B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A20B0CC325ED30A10035E4AE /* MonthCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCheckTests.swift; sourceTree = "<group>"; };
 		CD5E519D7F415A043E172C70 /* Pods-MobilliumDateFormatter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilliumDateFormatter_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobilliumDateFormatter_Tests/Pods-MobilliumDateFormatter_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FB76D6BB25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayYesterdayTomorrowTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +71,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1A7E80F425E7DCC700CFC1C0 /* WeekCheckTests.swift */,
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				A20B0CC325ED30A10035E4AE /* MonthCheckTests.swift */,
-				FB76D6BB25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift */,
+				7A0077E026021D6E0085E756 /* DateFormats.swift */,
+				7A0077D12601FF510085E756 /* MathOperationsTests.swift */,
+				7A0077CE2601FF420085E756 /* BoolOperationsTests.swift */,
+				607FACEB1AFB9204008FA782 /* DateFormatterTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -222,10 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A7E80F525E7DCC700CFC1C0 /* WeekCheckTests.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
-				A20B0CC425ED30A10035E4AE /* MonthCheckTests.swift in Sources */,
-				FB76D6BC25E7DCFC002958A4 /* TodayYesterdayTomorrowTests.swift in Sources */,
+				7A0077D22601FF510085E756 /* MathOperationsTests.swift in Sources */,
+				7A0077CF2601FF420085E756 /* BoolOperationsTests.swift in Sources */,
+				7A0077E126021D6E0085E756 /* DateFormats.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* DateFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
