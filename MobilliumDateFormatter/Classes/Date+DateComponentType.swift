@@ -15,7 +15,7 @@ public extension Date {
         case hour
         case minute
         case second
-        case milisecond
+        case millisecond
     }
     
 }
