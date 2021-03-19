@@ -1,6 +1,6 @@
 # MobilliumDateFormatter
 
-[![CI Status](https://img.shields.io/travis/aslanmehmetsalih/MobilliumDateFormatter.svg?style=flat)](https://travis-ci.org/mobillium/MobilliumDateFormatter)
+[![Build Status](https://github.com/mobillium/MobilliumDateFormatter/workflows/CI/badge.svg?branch=master)](https://github.com/mobillium/MobilliumDateFormatter/actions)
 [![Version](https://img.shields.io/cocoapods/v/MobilliumDateFormatter.svg?style=flat)](https://cocoapods.org/pods/MobilliumDateFormatter)
 [![License](https://img.shields.io/cocoapods/l/MobilliumDateFormatter.svg?style=flat)](https://cocoapods.org/pods/MobilliumDateFormatter)
 [![Platform](https://img.shields.io/cocoapods/p/MobilliumDateFormatter.svg?style=flat)](https://cocoapods.org/pods/MobilliumDateFormatter)
@@ -11,7 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 8.0+
+- iOS 9.0+
+- Swift 5.0+
 
 ## Installation
 
@@ -141,6 +142,11 @@ Set locale(optional):
 MobilliumDateFormatter.locale = Locale(identifier: "us")
 ```
 
+Set calendar(optional), default: Calendar.current:
+```swift
+MobilliumDateFormatter.calendar = Calendar.current
+```
+
 String to Date:
 ```swift
 let dateString = "2001-01-01 01:01:00"
@@ -157,6 +163,28 @@ TimeInterval to Date:
 ```swift
 let timeInterval = TimeInterval(exactly: 1549611277)!
 let date = Date.from(timeInterval)
+```
+
+supported date component types for math operations:
+```swift
+enum DateComponentType {
+    case year
+    case month
+    case weekOfYear
+    case day
+    case hour
+    case minute
+    case second
+    case millisecond
+}
+```
+
+example of adding days(you can add another date component type like this):
+```swift
+let date = Date()
+let newDate = date.add(.day, count: 1)
+// or
+let newDate = now.addDay(-1)
 ```
 
 ## License

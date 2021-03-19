@@ -9,7 +9,7 @@ public extension Date {
     
     func add(_ component: DateComponentType, count: Int) -> Date? {
         switch component {
-        case .milisecond:
+        case .millisecond:
             return addMillisecond(count)
         case .second:
             return addSecond(count)
@@ -68,6 +68,5 @@ public extension Date {
         let calendar = MobilliumDateFormatter.calendar
         return calendar.date(byAdding: .year, value: count, to: self)
     }
-    
     
 }
