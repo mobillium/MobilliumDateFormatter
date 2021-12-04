@@ -38,6 +38,9 @@ public extension Date {
         let now = Date()
         let monthOfTheYear = calendar.component(.month, from: now)
         let nextMonthOfTheYear = calendar.component(.month, from: self)
+        if monthOfTheYear == 12 && nextMonthOfTheYear == 1 {
+            return true
+        }
         return monthOfTheYear == nextMonthOfTheYear - 1
     }
     

@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MobilliumDateFormatter: 398a47e62aeeda24385c362c61c213550b07f047
+  MobilliumDateFormatter: f147d1af5fcf6096ef40489fd6855698fe4f5d3d
 
 PODFILE CHECKSUM: 873107ad216c46c49665232acadad65fc6e21ea1
 
