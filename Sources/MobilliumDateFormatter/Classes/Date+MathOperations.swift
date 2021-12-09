@@ -5,6 +5,8 @@
 //  Created by Mehmet Salih Aslan on 17.03.2021.
 //
 
+import Foundation
+
 public extension Date {
     
     func add(_ component: DateComponentType, count: Int) -> Date? {
