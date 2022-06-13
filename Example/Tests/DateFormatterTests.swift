@@ -62,6 +62,7 @@ class DateFormatterTests: XCTestCase {
         XCTAssertNotNil(date)
         XCTAssertNotNil(newDate)
         
+        // New Values
         let newTimeZone = TimeZone(abbreviation: "GMT+3")
         let dateStringFromDate = date!.to(.dateTime, timeZone: newTimeZone)
         let dateStringFromNewDate = newDate!.to(.dateTime, timeZone: timeZone)
