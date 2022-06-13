@@ -46,4 +46,29 @@ class DateFormatterTests: XCTestCase {
         XCTAssertNotNil(dateString)
     }
     
+    func testTimeZone() {
+        // Value
+        let timeZone = TimeZone(abbreviation: "GMT")
+        let dateString = "2001-01-01 01:01:00"
+        
+        // Check
+        XCTAssertNotNil(timeZone)
+        
+        // Create a Date
+        let date = Date.from(dateString, format: .dateTime, timeZone: timeZone)
+        let newDate = date?.addHour(3)
+        
+        // Check
+        XCTAssertNotNil(date)
+        XCTAssertNotNil(newDate)
+        
+        // New Values
+        let newTimeZone = TimeZone(abbreviation: "GMT+3")
+        let dateStringFromDate = date!.to(.dateTime, timeZone: newTimeZone)
+        let dateStringFromNewDate = newDate!.to(.dateTime, timeZone: timeZone)
+        
+        // Check
+        XCTAssertNotNil(newTimeZone)
+        XCTAssertEqual(dateStringFromDate, dateStringFromNewDate)
+    }
 }

@@ -16,19 +16,25 @@ public extension Date {
     }
     
     /// Creates a Date using 'dateString' and 'Date.Format'.
-    static func from(_ dateString: String, format: Date.Format) -> Date? {
+    static func from(_ dateString: String, format: Date.Format, timeZone: TimeZone? = nil) -> Date? {
         let dateformatter = DateFormatter()
         dateformatter.calendar = MobilliumDateFormatter.calendar
         dateformatter.locale = MobilliumDateFormatter.locale
+        if let timeZone = timeZone {
+            dateformatter.timeZone = timeZone
+        }
         dateformatter.dateFormat = format.rawValue
         return dateformatter.date(from: dateString)
     }
     
     /// Creates a String using 'Date'.
-    func to(_ format: Date.Format) -> String {
+    func to(_ format: Date.Format, timeZone: TimeZone? = nil) -> String {
         let dateformatter: DateFormatter = DateFormatter()
         dateformatter.calendar = MobilliumDateFormatter.calendar
         dateformatter.locale = MobilliumDateFormatter.locale
+        if let timeZone = timeZone {
+            dateformatter.timeZone = timeZone
+        }
         dateformatter.dateFormat = format.rawValue
         return dateformatter.string(from: self)
     }
